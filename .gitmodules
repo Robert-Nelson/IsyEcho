@@ -1,0 +1,4 @@
+[submodule "ISYlib-python"]
+	path = ISYlib-python
+	url = https://github.com/open-sw/ISYlib-python.git
+	branch = Python3-Changes
