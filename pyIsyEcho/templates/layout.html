@@ -1,0 +1,33 @@
+<!doctype html>
+<title>pyISYEcho</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='toggle.css') }}">
+
+<div class=page>
+    <h1>pyISYEcho</h1>
+    <div class="metanav">
+        <table style="width: 100%">
+            <tr>
+                <td>
+                    <input type="button" id="back-button" class="back-button" {{ disable_nav }} onclick="window.location.href = '{% block back_url %}{% endblock %}'"><label for="back-button" class="button-label" {{ disable_nav }}>{% block back_text %}{% endblock %}</label>
+                </td>
+                <td style="text-align: center">
+                    <span style="font-size: 1.75em">{% block page_title %}{% endblock %}</span>
+                </td>
+                <td style="text-align: right">
+                    <label for="forward-button" class="button-label" {{ disable_nav }}>{% block forward_text %}{% endblock %}</label><input type="button" id="forward-button" class="forward-button" {{ disable_nav }} onclick="window.location.href = '{% block forward_url %}{% endblock %}'">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p/>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+    <div class="flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+    <p/>
+        {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+</div>

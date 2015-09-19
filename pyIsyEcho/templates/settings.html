@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block page_title %}Settings{% endblock %}
+{% block forward_url %}{{ url_for("show_lights") }}{% endblock %}
+{% block forward_text %}Lights{% endblock %}
+{% block body %}
+    <form method="post">
+        <fieldset>
+            <legend>ISY 994i</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Host Name or IP Address
+                        </td>
+                        <td>
+                            <input name="IsyIP" type="text" maxlength="15" size="15" value="{{ settings.IsyIP }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            User Name
+                        </td>
+                        <td>
+                            <input name="IsyUser" type="text" maxlength="20" size="20" value="{{ settings.IsyUser }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password
+                        </td>
+                        <td>
+                            <input name="IsyPass" type="text" maxlength="20" size="20" value="{{ settings.IsyPass }}">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </fieldset>
+        </fieldset>
+        <p/>
+        <fieldset>
+            <legend>Echo User</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            User Name
+                        </td>
+                        <td>
+                            <input name="EchoUser" type="text" maxlength="20" size="20" value="{{ settings.EchoUser }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password
+                        </td>
+                        <td>
+                            <input name="EchoPass" type="text" maxlength="20" size="20" value="{{ settings.EchoPass }}">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </fieldset>
+        </fieldset>
+        <p/>
+        <fieldset>
+            <legend>Echo Client</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Client ID
+                        </td>
+                        <td>
+                            <input name="EchoClientID" type="text" maxlength="50" size="50" value="{{ settings.EchoClientID }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Client Secret
+                        </td>
+                        <td>
+                            <input name="EchoClientSecret" type="text" maxlength="50" size="50" value="{{ settings.EchoClientSecret }}">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </fieldset>
+        </fieldset>
+        <p/>
+        <div style="text-align: center"><input type="submit" value="Save"></div>
+    </form>
+{% endblock %}

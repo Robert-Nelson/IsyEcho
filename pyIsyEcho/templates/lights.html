@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block page_title %}Lights{% endblock %}
+{% block forward_url %}{{ url_for("show_settings") }}{% endblock %}
+{% block forward_text %}Settings{% endblock %}
+{% block body %}
+    <form method="post">
+        <fieldset>
+            <legend>Lights</legend>
+                <table>
+                    <thead>
+                        <th>Enabled</th>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Echo Name</th>
+                    </thead>
+                    <tbody>
+                        {% for address in sorted_keys %}
+                            <tr>
+                                {% if lights[address].missing %}
+                                <td>
+                                    <input type="button" class="delete-button" onclick="window.location.href = '{{ url_for("delete_light", address=address) }}'">
+                                </td>
+                                {% else %}
+                                <td>
+                                    <input type="checkbox" class="enable-button" id="light-{{- loop.index }}-enabled" name="lights[{{- loop.index }}][enabled]" {% if lights[address].enabled %}checked{% endif %}>
+                                </td>
+                                {% endif %}
+                                <td>
+                                    <input type="hidden" id="light-{{- loop.index }}-address" name="lights[{{- loop.index }}][address]" value="{{ address }}"/>
+                                </td>
+                                <td>
+                                    {{ lights[address].name }}
+                                </td>
+                                <td>
+                                    <input type="text" id="light-{{- loop.index }}-echo_name" name="lights[{{- loop.index }}][echo_name]" value="{{ lights[address].echo_name }}">
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+        </fieldset>
+        <p/>
+        <div style="text-align: center"><input type="submit" value="Save"></div>
+    </form>
+{% endblock %}
