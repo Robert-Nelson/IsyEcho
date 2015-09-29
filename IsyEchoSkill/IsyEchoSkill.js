@@ -58,7 +58,8 @@ exports.handler = function(event, context) {
              */
             // Warning! Logging this with production data might be a security problem.
             log('Done with result', str);
-            context.succeed(str);
+            
+            context.succeed(JSON.parse(str));
         });
 
         response.on('error', function(e) {

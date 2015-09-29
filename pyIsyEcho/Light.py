@@ -30,9 +30,11 @@ class Light(object):
         return light
 
     def on(self, director):
+        director.isy_controller[self.address].on()
         return
 
     def off(self, director):
+        director.isy_controller[self.address].off()
         return
 
     def set_lightlevel(self, director, level):

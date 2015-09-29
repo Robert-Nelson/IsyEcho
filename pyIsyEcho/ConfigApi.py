@@ -175,8 +175,27 @@ def discover_appliances(request):
 
 
 def switch_light(request):
-    pass
+    response = {
+        'header': {
+            'namespace': request['header']['namespace'],
+            'name': request['header']['name'].replace('Request', 'Response'),
+            'payloadVersion': '1'
+        },
+        'payload': {
+        }
+    }
+    action = request['payload']['switchControlAction']
+    address = request['payload']['appliance']['additionalApplianceDetails']['address']
+    success = True
+    if action == 'TURN_ON':
+        app.director.lights[address].on(app.director)
+    elif action == 'TURN_OFF':
+        app.director.lights[address].off(app.director)
+    else:
+        success = False
+    response['payload']['success'] = success
 
+    return response
 
 def set_light_level(request):
     pass
