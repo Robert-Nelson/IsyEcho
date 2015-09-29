@@ -149,27 +149,23 @@ class Director(object):
         self.echo_user = ""
         self.echo_password = ""
 
-        self._Echo_ClientID = ""
-        self._Echo_ClientSecret = ""
-
         self._lights = {}
 
         self._isy_controller = None
         self._isy_lights = None
 
-        self.grant = None
         self.token = None
 
     @property
     def settings(self):
         return {'IsyIP': self._Isy_IP, 'IsyUser': self._Isy_User, 'IsyPass': self._Isy_Pass,
                 'EchoUser': self.echo_user, 'EchoPassword': self.echo_password,
-                'EchoClientID': self._Echo_ClientID, 'EchoClientSecret': self._Echo_ClientSecret,
                 'SecretKey': self._secret_key}
 
     def update_settings(self, settings):
         if (settings['IsyIP'] != self._Isy_IP or settings['IsyUser'] != self._Isy_User or
             settings['IsyPass'] != self._Isy_Pass):
+
             self._Isy_IP = settings['IsyIP']
             self._Isy_User = settings['IsyUser']
             self._Isy_Pass = settings['IsyPass']
@@ -183,16 +179,10 @@ class Director(object):
             self.echo_user = settings['EchoUser']
             self.echo_password = settings['EchoPassword']
 
-        if settings['EchoClientID'] != self._Echo_ClientID or settings['EchoClientSecret'] != self._Echo_ClientSecret:
-            self._Echo_ClientID = settings['EchoClientID']
-            self._Echo_ClientSecret = settings['EchoClientSecret']
-
     @property
     def settings_complete(self):
         return (len(self._Isy_IP) > 0 and len(self._Isy_User) > 0 and len(self._Isy_Pass) > 0 and
-                len(self.echo_user) > 0 and len(self.echo_password) > 0 and
-                len(self._Echo_ClientID) > 0 and len(self._Echo_ClientSecret) > 0)
-
+                len(self.echo_user) > 0 and len(self.echo_password) > 0)
 
     @property
     def secret_key(self):
@@ -208,17 +198,6 @@ class Director(object):
     @property
     def lights(self):
         return self._lights
-
-    @property
-    def client(self):
-        if len(self._Echo_ClientID) > 0 and len(self._Echo_ClientSecret) > 0:
-            return {
-                "id": self._Echo_ClientID,
-                "secret": self._Echo_ClientSecret
-            }
-        else:
-            return None
-
 
     def load_config(self):
         try:
@@ -248,9 +227,6 @@ class Director(object):
 
         self.echo_user = config.get("EchoUser", "")
         self.echo_password = config.get("EchoPassword", "")
-
-        self._Echo_ClientID = config.get("EchoClientID", "")
-        self._Echo_ClientSecret = config.get("EchoClientSecret", "")
 
         for light_cfg in config.get("lights", {}):
             light = Light.Light(settings=light_cfg)
@@ -305,13 +281,16 @@ class Director(object):
                                 node_info = {
                                     'name': node.name,
                                     'type': node.type,
-                                    'address': node.address
+                                    'address': node.address,
+                                    'version': version
                                 }
                                 node_type_info = insteon_devices.get(category + "." + subcat)
                                 if node_type_info is not None:
-                                        node_info["type_desc"] = node_type_info["name"]
+                                    node_info["type_desc"] = node_type_info["name"]
+                                    node_info["type_model"] = node_type_info["model"]
                                 else:
-                                        node_info["type_desc"] = "Node type = " + node.type
+                                    node_info["type_desc"] = "Node type = " + node.type
+                                    node_info["type_model"] = "Unknown model"
                                 self._isy_lights[node_info['address']] = node_info
                             else:
                                 logger.debug("skipping node %s, family %s", node.name, node.family)

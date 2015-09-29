@@ -23,32 +23,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConfigApi.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ConfigApi.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pyIsyEcho/ConfigApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="0" selection-start="4106" selection-end="4106" vertical-scroll-proportion="-18.5" vertical-offset="1797" max-vertical-offset="2516">
+            <state line="173" column="0" selection-start="5670" selection-end="5670" vertical-scroll-proportion="0.3328859" vertical-offset="2693" max-vertical-offset="3740">
               <folding>
-                <element signature="e#101#133#0" expanded="true" />
+                <element signature="e#101#126#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OauthUtils.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pyIsyEcho/OauthUtils.py">
+      <file leaf-file-name="app.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/flask/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="2096" selection-end="2096" vertical-scroll-proportion="-19.0" vertical-offset="951" max-vertical-offset="2159">
-              <folding>
-                <element signature="e#149#174#0" expanded="true" />
-              </folding>
+            <state line="1474" column="0" selection-start="62107" selection-end="62107" vertical-scroll-proportion="0.0" vertical-offset="24385" max-vertical-offset="30991">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oauth2.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/flask_oauthlib/provider/oauth2.py">
+      <file leaf-file-name="local.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/werkzeug/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="484" column="0" selection-start="17104" selection-end="17104" vertical-scroll-proportion="-9.192307" vertical-offset="7802" max-vertical-offset="16184">
+            <state line="337" column="0" selection-start="10503" selection-end="10503" vertical-scroll-proportion="0.0" vertical-offset="5447" max-vertical-offset="7021">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MANIFEST.in" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Light.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyIsyEcho/Light.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="53" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="867">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyIsyEcho/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
               <folding />
             </state>
           </provider>
@@ -57,63 +91,16 @@
       <file leaf-file-name="Director.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyIsyEcho/Director.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="26" selection-start="14980" selection-end="14980" vertical-scroll-proportion="0.0" vertical-offset="4185" max-vertical-offset="5440">
+            <state line="283" column="60" selection-start="14230" selection-end="14230" vertical-scroll-proportion="0.0" vertical-offset="4236" max-vertical-offset="5083">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/flask/app.py">
+      <file leaf-file-name="pyISYEchoServer.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pyISYEchoServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1492" column="39" selection-start="62831" selection-end="62831" vertical-scroll-proportion="0.0" vertical-offset="24470" max-vertical-offset="30991">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authorization_code.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://C:/Python27/Lib/site-packages/oauthlib/oauth2/rfc6749/grant_types/authorization_code.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="4535" selection-end="4535" vertical-scroll-proportion="0.33240613" vertical-offset="1546" max-vertical-offset="6919">
-              <folding>
-                <element signature="e#105#161#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/oauthlib/common.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="18" selection-start="7633" selection-end="7637" vertical-scroll-proportion="-9.192307" vertical-offset="3501" max-vertical-offset="7429">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISYEcho.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/instance/ISYEcho.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="42" selection-start="23" selection-end="63" vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="4403">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/oauthlib/oauth2/rfc6749/endpoints/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="1657" selection-end="1657" vertical-scroll-proportion="-22.423077" vertical-offset="386" max-vertical-offset="1105">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authorization.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/oauthlib/oauth2/rfc6749/endpoints/authorization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="0" selection-start="3968" selection-end="3968" vertical-scroll-proportion="-15.884615" vertical-offset="1219" max-vertical-offset="1938">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -129,16 +116,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/pyIsyEcho/__init__.py" />
         <option value="$PROJECT_DIR$/pyIsyEcho/templates/settings.html" />
         <option value="$PROJECT_DIR$/instance/ISYEcho.json" />
-        <option value="$PROJECT_DIR$/pyIsyEcho/Director.py" />
         <option value="$PROJECT_DIR$/pyIsyEcho/templates/login.html" />
-        <option value="$PROJECT_DIR$/pyIsyEcho/ConfigApi.py" />
         <option value="$PROJECT_DIR$/pyIsyEcho/templates/authorize.html" />
         <option value="$PROJECT_DIR$/pyIsyEcho/OauthUtils.py" />
         <option value="C:/Python27/Lib/site-packages/oauthlib/oauth2/rfc6749/grant_types/authorization_code.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/pyIsyEcho/__init__.py" />
+        <option value="$PROJECT_DIR$/pyIsyEcho/Light.py" />
+        <option value="$PROJECT_DIR$/pyIsyEcho/ConfigApi.py" />
+        <option value="$PROJECT_DIR$/pyIsyEcho/Director.py" />
       </list>
     </option>
   </component>
@@ -423,9 +411,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24970461" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40046656" sideWeight="0.49980307" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40046656" sideWeight="0.7455691" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40046656" sideWeight="0.50019693" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40046656" sideWeight="0.2544309" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -455,26 +443,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/pyIsyEcho/ConfigApi.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/pyIsyEcho/ConfigApi.py</url>
-          <line>64</line>
+          <line>62</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/pyIsyEcho/ConfigApi.py</url>
-          <line>111</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/pyIsyEcho/ConfigApi.py</url>
-          <line>28</line>
+          <line>26</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="22" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -485,39 +463,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyISYEchoServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="747">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyIsyEcho/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding>
-            <element signature="e#147#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/werkzeug/debug/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="0" selection-start="3195" selection-end="3195" vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="3145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="335" column="0" selection-start="10418" selection-end="10418" vertical-scroll-proportion="0.0" vertical-offset="5413" max-vertical-offset="7021">
           <folding />
         </state>
       </provider>
@@ -550,13 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyIsyEcho/templates/authorize.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="52" selection-start="237" selection-end="237" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/SocketServer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="154" column="0" selection-start="5999" selection-end="5999" vertical-scroll-proportion="0.0" vertical-offset="2302" max-vertical-offset="12495">
@@ -571,44 +512,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyIsyEcho/Director.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="26" selection-start="14980" selection-end="14980" vertical-scroll-proportion="0.0" vertical-offset="4287" max-vertical-offset="5440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/oauthlib/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="18" selection-start="7633" selection-end="7637" vertical-scroll-proportion="-9.192307" vertical-offset="3501" max-vertical-offset="7429">
+        <state line="228" column="18" selection-start="7633" selection-end="7637" vertical-scroll-proportion="0.33240613" vertical-offset="3501" max-vertical-offset="7429">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/site-packages/oauthlib/oauth2/rfc6749/endpoints/authorization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="3968" selection-end="3968" vertical-scroll-proportion="-15.884615" vertical-offset="1219" max-vertical-offset="1938">
+        <state line="102" column="0" selection-start="3968" selection-end="3968" vertical-scroll-proportion="0.5744089" vertical-offset="1219" max-vertical-offset="1938">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/site-packages/oauthlib/oauth2/rfc6749/endpoints/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1657" selection-end="1657" vertical-scroll-proportion="-22.423077" vertical-offset="386" max-vertical-offset="1105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1492" column="39" selection-start="62831" selection-end="62831" vertical-scroll-proportion="0.0" vertical-offset="24470" max-vertical-offset="30991">
+        <state line="63" column="0" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.8108484" vertical-offset="386" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/instance/ISYEcho.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="42" selection-start="23" selection-end="63" vertical-scroll-proportion="-0.68" vertical-offset="0" max-vertical-offset="4403">
+        <state line="1" column="42" selection-start="23" selection-end="63" vertical-scroll-proportion="0.023611112" vertical-offset="0" max-vertical-offset="4403">
           <folding />
         </state>
       </provider>
@@ -620,29 +547,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyIsyEcho/OauthUtils.py">
+    <entry file="file://C:/Python27/Lib/site-packages/oauthlib/oauth2/rfc6749/grant_types/authorization_code.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2096" selection-end="2096" vertical-scroll-proportion="-19.0" vertical-offset="951" max-vertical-offset="2159">
+        <state line="105" column="0" selection-start="4535" selection-end="4535" vertical-scroll-proportion="0.33240613" vertical-offset="1546" max-vertical-offset="6919">
           <folding>
-            <element signature="e#149#174#0" expanded="true" />
+            <element signature="e#105#161#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyISYEchoServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="747">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyIsyEcho/Light.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="53" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyIsyEcho/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1474" column="0" selection-start="62107" selection-end="62107" vertical-scroll-proportion="0.0" vertical-offset="24385" max-vertical-offset="30991">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/werkzeug/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="337" column="0" selection-start="10503" selection-end="10503" vertical-scroll-proportion="0.0" vertical-offset="5447" max-vertical-offset="7021">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyIsyEcho/Director.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="283" column="60" selection-start="14230" selection-end="14230" vertical-scroll-proportion="0.0" vertical-offset="4236" max-vertical-offset="5083">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pyIsyEcho/ConfigApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="0" selection-start="4106" selection-end="4106" vertical-scroll-proportion="-18.5" vertical-offset="1797" max-vertical-offset="2516">
+        <state line="173" column="0" selection-start="5670" selection-end="5670" vertical-scroll-proportion="0.3328859" vertical-offset="2693" max-vertical-offset="3740">
           <folding>
-            <element signature="e#101#133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/oauthlib/oauth2/rfc6749/grant_types/authorization_code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="4535" selection-end="4535" vertical-scroll-proportion="0.33240613" vertical-offset="1546" max-vertical-offset="6919">
-          <folding>
-            <element signature="e#105#161#0" expanded="true" />
+            <element signature="e#101#126#0" expanded="true" />
           </folding>
         </state>
       </provider>

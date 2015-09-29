@@ -18,52 +18,12 @@ class Light(object):
 
         settings = kwargs.get("settings", {})
 
-        self._address = settings.get("address", None)
-        self._name = settings.get("name", "")
-        self._echo_name = settings.get("echo_name", "")
+        self.address = settings.get("address", None)
+        self.name = settings.get("name", "")
+        self.echo_name = settings.get("echo_name", "")
 
-        self._enabled = settings.get("enabled", True)
-        self._missing = settings.get("missing", False)
-
-    @property
-    def address(self):
-        return self._address
-
-    @address.setter
-    def address(self, value):
-        self._address = value
-
-    @property
-    def name(self):
-        return self._name
-
-    @name.setter
-    def name(self, value):
-        self._name = value
-
-    @property
-    def echo_name(self):
-        return self._echo_name
-
-    @echo_name.setter
-    def echo_name(self, value):
-        self._echo_name = value
-
-    @property
-    def enabled(self):
-        return self._enabled
-
-    @enabled.setter
-    def enabled(self, value):
-        self._enabled = value
-
-    @property
-    def missing(self):
-        return self._missing
-
-    @missing.setter
-    def missing(self, value):
-        self._missing = value
+        self.enabled = settings.get("enabled", True)
+        self.missing = settings.get("missing", False)
 
     def serialize(self):
         light = {'address': self._address, 'name': self._name, 'echo_name': self._echo_name, 'enabled': self._enabled}

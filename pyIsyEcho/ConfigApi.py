@@ -2,11 +2,9 @@ __author__ = 'Robert Nelson'
 __copyright__ = "Copyright (C) 2014 Robert Nelson"
 __license__ = "BSD"
 
-from pyIsyEcho import app, oauth
+from pyIsyEcho import app
 from functools import wraps
 from flask import g, flash, jsonify, request, redirect, render_template, session, url_for
-
-from OauthUtils import current_user
 
 import re
 import logging
@@ -65,7 +63,6 @@ def parse_settings(values):
     settings = {
         'IsyIP': values['IsyIP'], 'IsyUser': values['IsyUser'], 'IsyPass': values['IsyPass'],
         'EchoUser': values['EchoUser'], 'EchoPass': values['EchoPass'],
-        'EchoClientID': values['EchoClientID'], 'EchoClientSecret': values['EchoClientSecret']
     }
     return settings
 
@@ -111,32 +108,107 @@ def login():
             session['user'] = username
             return redirect(request.referrer)
         return redirect('/login')
-    user = current_user()
-    return render_template('login.html', user=user)
-
-
-@app.route('/oauth/authorize', methods=['GET', 'POST'])
-@oauth.authorize_handler
-def authorize(*args, **kwargs):
-    user = current_user()
-#    if not user:
-#        return redirect('/login')
-    if request.method == 'GET':
-        # render a page for user to confirm the authorization
-        return render_template('authorize.html', **kwargs)
-
-    confirm = request.form.get('confirm', 'no')
-    return confirm == 'yes'
-
-
-@app.route('/oauth/token', methods=['POST'])
-@oauth.token_handler
-def handle_token():
-    return None
+    #user = current_user()
+    #return render_template('login.html', user=user)
 
 
 @app.route('/request', methods=['POST'])
-@oauth.require_oauth('IsyEcho')
 def handle_request():
     logger.debug("Request: " + request.data)
-    return jsonify({"result": "This is the result"})
+    namespace = request.json['header']['namespace']
+    operation = request.json['header']['name']
+    response = generate_error_response(request.json, "UNSUPPORTED_OPERATION", "Unsupported name - " + operation + " in namespace " + namespace)
+    if namespace == 'Discovery':
+        if operation == 'DiscoverAppliancesRequest':
+            response = discover_appliances(request.json)
+    elif namespace == 'Control':
+        if operation == 'SwitchOnOffRequest':
+            response = switch_light(request.json)
+        elif operation == 'AdjustNumericalSettingRequest':
+            response = set_light_level(request.json)
+    elif namespace == 'System':
+        if operation == 'HealthCheckRequest':
+            response = health_check(request.json)
+    else:
+        response = generate_error_response(request.json, "UNSUPPORTED_OPERATION", "Unrecognized namespace - " + namespace)
+
+    return jsonify(response)
+
+
+def discover_appliances(request):
+    response = {
+        'header': {
+            'namespace': 'Discovery',
+            'name': 'DiscoverAppliancesResponse',
+            'payloadVersion': '1'
+        },
+        'payload': {
+        }
+    }
+
+    isy_lights = app.director.get_lights()
+    isy_missing_light = {
+        'type_model': 'Unknown model',
+        'type_desc': 'Unknown device description'
+    }
+
+    lights = []
+    for light in app.director.lights.values():
+        if light.enabled:
+            isy_light = isy_lights[light.address] or isy_missing_light
+            device = {
+                'applianceId': light.address.replace(' ', '_'),
+                'manufacturerName': 'Insteon',
+                'modelName': isy_light['type_model'],
+                'version': isy_light['version'],
+                'friendlyName': light.echo_name,
+                'friendlyDescription': isy_light['type_desc'],
+                'isReachable': not light.missing,
+                'additionalApplianceDetails': {
+                    'address': light.address
+                }
+            }
+            lights.append(device)
+
+    response['payload']['discoveredAppliances'] = lights
+    return response
+
+
+def switch_light(request):
+    pass
+
+
+def set_light_level(request):
+    pass
+
+
+def health_check(request):
+    response = {
+        'header': {
+            'namespace': 'System',
+            'name': 'HealthCheckResponse',
+            'payloadVersion': '1'
+        },
+        'payload': {
+            "isHealthy": True,
+            "description": "The system is currently healthy"
+        }
+    }
+    return response
+
+
+def generate_error_response(request, code, message):
+    response = {
+        'header': {
+            'namespace': request['header']['namespace'],
+            'name': request['header']['name'].replace('Request', 'Response'),
+            'payloadVersion': request['header']['payloadVersion']
+        },
+        'payload': {
+            'exception': {
+                'code': code,
+                'description': message
+            }
+        }
+    }
+    return response

@@ -5,7 +5,6 @@ __license__ = "BSD"
 __all__ = ['Director', 'Light', 'ConfigApi']
 
 from flask import Flask
-from flask_oauthlib.provider import OAuth2Provider
 
 
 class MyFlask(Flask):
@@ -18,11 +17,5 @@ class MyFlask(Flask):
 
 
 app = MyFlask(__package__)
-
-app.config.update({
-    'SQLALCHEMY_DATABASE_URI': 'sqlite:///db.sqlite',
-})
-
-oauth = OAuth2Provider(app)
 
 import ConfigApi
