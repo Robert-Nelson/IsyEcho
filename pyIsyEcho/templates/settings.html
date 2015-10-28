@@ -10,10 +10,10 @@
                 <tbody>
                     <tr>
                         <td>
-                            Host Name or IP Address
+                            ISY 994i URL
                         </td>
                         <td>
-                            <input name="IsyIP" type="text" maxlength="15" size="15" value="{{ settings.IsyIP }}">
+                            <input name="IsyUrl" type="text" maxlength="15" size="15" value="{{ settings.IsyUrl }}">
                         </td>
                     </tr>
                     <tr>
@@ -38,7 +38,7 @@
         </fieldset>
         <p/>
         <fieldset>
-            <legend>Echo User</legend>
+            <legend>User</legend>
             <table>
                 <tbody>
                     <tr>
@@ -46,7 +46,7 @@
                             User Name
                         </td>
                         <td>
-                            <input name="EchoUser" type="text" maxlength="20" size="20" value="{{ settings.EchoUser }}">
+                            <input name="Username" type="text" maxlength="20" size="20" value="{{ settings.Username }}">
                         </td>
                     </tr>
                     <tr>
@@ -54,32 +54,15 @@
                             Password
                         </td>
                         <td>
-                            <input name="EchoPass" type="text" maxlength="20" size="20" value="{{ settings.EchoPass }}">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            </fieldset>
-        </fieldset>
-        <p/>
-        <fieldset>
-            <legend>Echo Client</legend>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            Client ID
-                        </td>
-                        <td>
-                            <input name="EchoClientID" type="text" maxlength="50" size="50" value="{{ settings.EchoClientID }}">
+                            <input name="Password" type="text" maxlength="20" size="20" value="{{ settings.Password }}">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Client Secret
+                            Amazon Email
                         </td>
                         <td>
-                            <input name="EchoClientSecret" type="text" maxlength="50" size="50" value="{{ settings.EchoClientSecret }}">
+                            <input name="AmazonEmail" type="text" maxlength="40" size="40" value="{{ settings.AmazonEmail }}">
                         </td>
                     </tr>
                 </tbody>

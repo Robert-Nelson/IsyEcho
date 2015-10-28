@@ -26,23 +26,20 @@ class Light(object):
         self.missing = settings.get("missing", False)
 
     def serialize(self):
-        light = {'address': self._address, 'name': self._name, 'echo_name': self._echo_name, 'enabled': self._enabled}
+        light = {'address': self.address, 'name': self.name, 'echo_name': self.echo_name, 'enabled': self.enabled}
         return light
 
     def on(self, director):
-        director.isy_controller[self.address].on()
+        director.isy_controller.execute_node_command(self.address, 'DON', [])
         return
 
     def off(self, director):
-        director.isy_controller[self.address].off()
+        director.isy_controller.execute_node_command(self.address, 'DOF', [])
         return
 
+    def get_lightlevel(self, director):
+        return director.isy_controller.get_node_property(self.address, 'ST')
+
     def set_lightlevel(self, director, level):
+        director.isy_controller.set_node_property(self.address, 'ST', level)
         return
-        # if not self._ignore_status:
-        #     if level == 255:
-        #         self.on(director, False)
-        #     elif level == 0:
-        #         self.off(director)
-        # else:
-        #     self._ignore_status = False
